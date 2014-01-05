@@ -1,0 +1,26 @@
+*.class
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+.classpath
+.project
+WebContent/WEB-INF/classes/**/*
+*~
+target/*
+*/.settings/*
+.settings/*
+opt/*
+*/logs/*
+logs/*
+*/target/*
+*/MANIFEST.MF
+.springbeans
+*.idea
+*.iml
+src/main/resources/git.properties
+*atlassian*
+*/META-INF/MANIFEST.MF
+*/bin/*
