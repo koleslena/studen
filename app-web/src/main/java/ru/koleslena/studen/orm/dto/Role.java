@@ -1,0 +1,61 @@
+package ru.koleslena.studen.orm.dto;
+
+import java.io.Serializable;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+/**
+ * @author koleslena
+ *
+ */
+@Entity
+@Table(name = "ST_ROLE", schema = "studen")
+public class Role implements Serializable {
+	
+	public final static String STRING_USER_ROLE_NAME = "user";
+	public final static String STRING_ADMIN_ROLE_NAME = "admin";
+
+	@Id
+	@Column(name = "ROLE_ID")
+	private Integer id;
+	
+	@Column(name = "ROLE_NAME")
+	private String name;
+
+	@Column(name = "ROLE_SPRING_NAME")
+	private String springName;
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	public String getSpringName() {
+		return springName;
+	}
+	
+	public void setSpringName(String springName) {
+		this.springName = springName;
+	}
+	
+	@Override
+	public String toString() {
+		return new StringBuilder("Role:").append(" id=").append(getId())
+										.append(", name=").append(getName())
+										.append(", apringName=").append(getSpringName()).toString();
+	}
+}
