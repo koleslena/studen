@@ -12,7 +12,7 @@
         <org.springframework-version>3.2.3.RELEASE</org.springframework-version>
         <org.springframeworksecurity-version>3.1.4.RELEASE</org.springframeworksecurity-version>
         <org.slf4j-version>1.7.2</org.slf4j-version>
-		<systest.package>**/ru/koleslena/studen/test/**</systest.package>
+		<systest.package>**src/test/java/ru/koleslena/studen/test/**</systest.package>
     </properties>
 
 
