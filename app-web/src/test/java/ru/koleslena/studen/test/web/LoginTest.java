@@ -6,6 +6,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.view;
+import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.forwardedUrl;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -45,8 +46,9 @@ public class LoginTest {
 	    try {
 			this.mockMvc.perform(get("/login"))
 			  .andExpect(status().isOk())
-			  .andExpect(content().contentType(MediaType.TEXT_HTML))
-			  .andExpect(view().name("login"));
+			  //.andExpect(content().contentType(MediaType.TEXT_HTML));
+			  .andExpect(view().name("login"))
+			  .andExpect(forwardedUrl("/WEB-INF/views/login.jsp"));
 		} catch (Exception e) {
 			assertNull("exception during test login page", e);
 		}
