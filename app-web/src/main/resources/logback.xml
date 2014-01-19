@@ -23,9 +23,6 @@
     <logger level="info" name="org.hibernate.SQL"/>
     <!--<logger level="debug" name="org.hibernate.jdbc"/>-->
 
-    <logger level="info" name="ru.poidem"/>
-    <!--<logger level="debug" name="ru.prbb.dek.kot.web.ReviewController"/>-->
-
     <root level="info">
         <appender-ref ref="FILE"/>
         <appender-ref ref="STDOUT"/>
